@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C7944C72A378A080055B2B0 /* OpenTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7944C62A378A080055B2B0 /* OpenTaskViewController.swift */; };
+		2C7944CD2A37A5E70055B2B0 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7944CC2A37A5E60055B2B0 /* TaskViewController.swift */; };
 		2CD0EF962A2FAF2E00393D2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0EF952A2FAF2E00393D2D /* AppDelegate.swift */; };
 		2CD0EF982A2FAF2E00393D2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0EF972A2FAF2E00393D2D /* SceneDelegate.swift */; };
-		2CD0EF9A2A2FAF2E00393D2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0EF992A2FAF2E00393D2D /* ViewController.swift */; };
 		2CD0EF9D2A2FAF2E00393D2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD0EF9B2A2FAF2E00393D2D /* Main.storyboard */; };
 		2CD0EF9F2A2FAF3200393D2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD0EF9E2A2FAF3200393D2D /* Assets.xcassets */; };
 		2CD0EFA22A2FAF3200393D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD0EFA02A2FAF3200393D2D /* LaunchScreen.storyboard */; };
+		2CD0EFAB2A2FB13A00393D2D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0EFAA2A2FB13A00393D2D /* TableViewController.swift */; };
+		2CD0EFAD2A2FB19400393D2D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0EFAC2A2FB19400393D2D /* CustomCell.swift */; };
+		2CD0EFAF2A2FB1A500393D2D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD0EFAE2A2FB1A500393D2D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C7944C62A378A080055B2B0 /* OpenTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTaskViewController.swift; sourceTree = "<group>"; };
+		2C7944CC2A37A5E60055B2B0 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		2CD0EF922A2FAF2E00393D2D /* toDo_list_MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDo_list_MVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD0EF952A2FAF2E00393D2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD0EF972A2FAF2E00393D2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2CD0EF992A2FAF2E00393D2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CD0EF9C2A2FAF2E00393D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CD0EF9E2A2FAF3200393D2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CD0EFA12A2FAF3200393D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CD0EFA32A2FAF3200393D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CD0EFAA2A2FB13A00393D2D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2CD0EFAC2A2FB19400393D2D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		2CD0EFAE2A2FB1A500393D2D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C7944C12A3250460055B2B0 /* AddView */ = {
+			isa = PBXGroup;
+			children = (
+				2C7944C62A378A080055B2B0 /* OpenTaskViewController.swift */,
+				2C7944CC2A37A5E60055B2B0 /* TaskViewController.swift */,
+			);
+			path = AddView;
+			sourceTree = "<group>";
+		};
 		2CD0EF892A2FAF2E00393D2D = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +73,26 @@
 		2CD0EF942A2FAF2E00393D2D /* toDo_list_MVC */ = {
 			isa = PBXGroup;
 			children = (
+				2CD0EFA92A2FB10F00393D2D /* TableView */,
 				2CD0EF952A2FAF2E00393D2D /* AppDelegate.swift */,
 				2CD0EF972A2FAF2E00393D2D /* SceneDelegate.swift */,
-				2CD0EF992A2FAF2E00393D2D /* ViewController.swift */,
 				2CD0EF9B2A2FAF2E00393D2D /* Main.storyboard */,
 				2CD0EF9E2A2FAF3200393D2D /* Assets.xcassets */,
 				2CD0EFA02A2FAF3200393D2D /* LaunchScreen.storyboard */,
 				2CD0EFA32A2FAF3200393D2D /* Info.plist */,
 			);
 			path = toDo_list_MVC;
+			sourceTree = "<group>";
+		};
+		2CD0EFA92A2FB10F00393D2D /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				2C7944C12A3250460055B2B0 /* AddView */,
+				2CD0EFAA2A2FB13A00393D2D /* TableViewController.swift */,
+				2CD0EFAC2A2FB19400393D2D /* CustomCell.swift */,
+				2CD0EFAE2A2FB1A500393D2D /* Model.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CD0EF9A2A2FAF2E00393D2D /* ViewController.swift in Sources */,
+				2CD0EFAF2A2FB1A500393D2D /* Model.swift in Sources */,
+				2C7944CD2A37A5E70055B2B0 /* TaskViewController.swift in Sources */,
 				2CD0EF962A2FAF2E00393D2D /* AppDelegate.swift in Sources */,
+				2C7944C72A378A080055B2B0 /* OpenTaskViewController.swift in Sources */,
+				2CD0EFAB2A2FB13A00393D2D /* TableViewController.swift in Sources */,
+				2CD0EFAD2A2FB19400393D2D /* CustomCell.swift in Sources */,
 				2CD0EF982A2FAF2E00393D2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
