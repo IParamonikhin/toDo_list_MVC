@@ -14,17 +14,15 @@ enum Mode{
 }
 
 protocol TaskDelegate: AnyObject{
-    func callback(_ name: String, _ date: Date)
+    func addCallback(_ name: String, _ date: Date)
+    func editCallback(_ index: Int, _ name: String, _ date: Date)
 }
 
 class TableViewController: UITableViewController {
     
-    var editCellIndex = 0
-    var mode: Mode = .none
     var alert = UIAlertController()
     let model = Model()
     
-    @IBOutlet weak var editModeButton: UIBarButtonItem!
     @IBOutlet weak var addModeButton: UIBarButtonItem!
     
     
@@ -128,23 +126,23 @@ class TableViewController: UITableViewController {
     }
     
     func editCellContent(indexPath: IndexPath) {
-        self.mode = .edit
-        self.editCellIndex = indexPath.row
-        
         
         let showVC = storyboard?.instantiateViewController(identifier: "TaskVC") as! TaskViewController
         if let sheet = showVC.sheetPresentationController{ sheet.detents = [.medium()]}
         showVC.delegate = self
+        showVC.mode = .edit
+        showVC.editCellIndex = indexPath.row
+        showVC.taskName = model.toDoItems[indexPath.row].name
         present(showVC, animated: true)
         
     }
     
 
     @IBAction func addModeButtonAction(_ sender: UIBarButtonItem) {
-        self.mode = .add
         let showVC = storyboard?.instantiateViewController(identifier: "TaskVC") as! TaskViewController
         if let sheet = showVC.sheetPresentationController{ sheet.detents = [.medium()]}
         showVC.delegate = self
+        showVC.mode = .add
         present(showVC, animated: true)
     }
 
@@ -170,14 +168,14 @@ extension TableViewController: CustomCellDelegate{
 
 extension TableViewController: TaskDelegate{
 
-    func callback(_ name: String, _ date: Date) {
-        if self.mode == .add{
+    func addCallback(_ name: String, _ date: Date) {
             model.addItem(name: name, endDate: date)
-        }
-        else if self.mode == .edit{
-            model.updateItem(at: self.editCellIndex, with: name, deadLine: date)
-        }
-        self.mode = .none
+        tableView.reloadData()
+    }
+    
+    func editCallback(_ index: Int, _ name: String, _ date: Date){
+        
+        model.updateItem(at: index, with: name, deadLine: date)
         tableView.reloadData()
     }
     
